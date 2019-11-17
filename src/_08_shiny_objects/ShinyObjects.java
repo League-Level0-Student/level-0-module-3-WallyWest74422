@@ -15,11 +15,12 @@ public class ShinyObjects {
 	public static void main(String[] args) {
 		// 2. Ask the user how many shiny objects they want
 String shiny = JOptionPane.showInputDialog("How many shiny objects do you want?");
+int z = Integer.parseInt(shiny);
 		// 3. Play the sound that many times
-
+for(int i=0;i<z;i++) {
 		// 1. Call the method below
 playMisterZee();
-	}
+	}}
 
 	public static void playMisterZee() {
 		try {
