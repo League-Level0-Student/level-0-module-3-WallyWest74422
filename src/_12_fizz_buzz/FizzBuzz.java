@@ -8,7 +8,9 @@ package _12_fizz_buzz;
 * Fizz Buzz
 * 
 * In this project, we're going to build FizzBuzz. It's a children's game where
-* you count from 1 to 20. Easy, right? Here's the catch: instead of saying
+* you count from 1 to 20. Easy, right? 
+* no
+// Here's the catch: instead of saying
 * numbers divisible by 3, say "Fizz". And instead of saying numbers divisible
 * by 5, say "Buzz". For numbers divisible by both 3 and 5, say "FizzBuzz".
 * 
@@ -26,6 +28,23 @@ package _12_fizz_buzz;
 **/
 
 public class FizzBuzz {
+public static void main(String[] args) {
+	for (int number=1;  number<21; number++) {
 
-}
+		
+
+	    if (number % 15 == 0) {
+	        System.out.println("fizzbuzz");
+	    } else if (number % 5 == 0) {
+	        System.out.println("buzz");
+	    }else if (number % 3 ==0) {
+	    	System.out.println("fizz");
+	    }else {
+		     System.out.println(number);}
+	    }
+	    }}
+
+
+
+
 
