@@ -1,28 +1,35 @@
 package _16_obedient_robot;
+import java.awt.Color;
+
 import javax.swing.JOptionPane;
 
 import org.jointheleague.graphical.robot.Robot;
 
 public class shapeRobot {
+	static Robot zane=new Robot("batman");
 public static void main(String[] args) {
 String shape =	JOptionPane.showInputDialog("What shape do you want? Options are Square, Circle, and Triangle");
 String color =	JOptionPane.showInputDialog("Which color would you like? Options are Red, Green, and Blue");
-if(shape.equals("Square")) {
-	drawSquare();
-}else if(shape.equals("Triangle")) {
-	drawTriangle();
-}else if(shape.equals("Circle")) {
-	drawCircle();
+
 	if(color.equals("Red")) {
-		drawSquare();
+		zane.penDown();
+	zane.setPenColor(Color.red);
 	}else if(color.equals("Green")) {
-		drawTriangle();
+		zane.penDown();
+		zane.setPenColor(0, 255, 0);
 	}else if(color.equals("Blue")) {
+		zane.penDown(); 
+		zane.setPenColor(0, 0, 255);
+	}
+	if(shape.equals("Square")) {
+		drawSquare();
+	}else if(shape.equals("Triangle")) {
+		drawTriangle();
+	}else if(shape.equals("Circle")) {
 		drawCircle();
-}}
+	}
 }	
-	public static void drawSquare() {
-		Robot zane=new Robot("batman");
+	public static void drawSquare() {	
 		zane.setSpeed(100);
 		zane.penDown();
 		for(int i=1;i<5;i++) {
@@ -30,7 +37,6 @@ if(shape.equals("Square")) {
 			zane.move(100);}
 	}
 	public static void drawTriangle() {
-		Robot zane=new Robot("sparkle");
 		zane.setSpeed(100);
 		zane.penDown();
 		for(int i=1;i<4;i++) {
@@ -38,7 +44,6 @@ if(shape.equals("Square")) {
 			zane.move(100);}
 	}
 	public static void drawCircle() {
-		Robot zane=new Robot("mini");
 		zane.setSpeed(250);
 		zane.penDown();
 		for(int i=1;i<361;i++) {
